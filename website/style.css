@@ -1,88 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body{
-    background: #fffff8;
+    /*background: #fffff8;*/
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 #app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: snow;
+    height: 100vh;
+    width: 100vw;
+    overflow: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*display: grid;*/
+    /*grid-auto-rows: minmax(150px, auto);*/
+    /*!* grid-template-columns:  *!*/
+    /*height:100vh;*/
+    /*background: #f23557;*/
+    /*color: #f0d43a;*/
+    /*justify-content: center;*/
+    /*grid-gap: 1em;*/
+    /*font-size: 20px;*/
+    /*font-family: 'Oswald', sans-serif;*/
 }
 
-.holder{
+.headline{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background: #f0d43a;
+}
 
+.inputsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.zip {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.zip input {
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.feel{
+    display: flex;
+    flex-direction: column;
+}
+
+.feel textarea {
+    margin-top: 10px;
+}
+
+button {
+    height: 30px;
+    width: 100px;
+    margin: 20px auto;
+    background: lightgreen;
+    cursor: pointer;
+    border: none;
+    transition: all ease-in .2s;
+}
+
+button:hover {
+    background: green;
+    color: white;
 }
 
 .entry{
-    background: rgba(59, 74, 107, .4);
+    background: aquamarine;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    opacity: .8;
+}
+
+.entry__wrapper {
+
+}
+
+.title {
+    margin: 20px 0;
 }
 
 #entryHolder{
-
+    display: flex;
+    flex-direction: column;
 }
 
 #date{
-
+    margin: 5px 0;
 }
 
 #temp{
-
+    margin: 5px 0;
 }
 
 #content{
-
+    margin: 5px 0;
 }
 
-.headline {
-
-}
 .title{
 
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
-    display:block;
-    font-size: 27px;
+    /*display:block;*/
+    /*font-size: 27px;*/
 }
 
 input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
+    /*display:block;*/
+    /*height: 60px;*/
+    /*width: 320px;*/
+    /*background:#22b2da;*/
+    /*color: #f0d43a;*/
+    /*font-size: 20px;*/
+    /*font-family: 'Oswald', sans-serif;*/
+    /*border: none;*/
 }
 
 button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
+    /*width: 400px;*/
+    /*height: 100px;*/
+    /*background: #3b4a6b;*/
+    /*color: #f0d43a;*/
+    /*font-size: 26px;*/
+    /*font-family: 'Oswald', sans-serif;*/
+    /*border: none;*/
+    /*box-shadow: 2px 4px 5px #444;*/
 }
 h1{
     font-size: 36px;
 }
 
 textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    /*background:#22b2da;*/
+    /*color: #f0d43a;*/
+    /*font-size: 20px;*/
+    /*font-family: 'Oswald', sans-serif;*/
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
