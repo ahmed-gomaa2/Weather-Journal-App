@@ -1,11 +1,19 @@
-/* Global Variables */
+//***************************************
+// Defining the API variables.
+//***************************************
 const apiKey = '31a296fb035ec451688ba5b3d21a57d7';
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather';
+
+//***************************************
+// Getting Today's Date.
+//***************************************
 
 let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
-const btn = document.getElementById('generate');
+//**************************************************
+// Creating the Function to fetch data from the API.
+//**************************************************
 
 const getData = async (url='', zip, key) => {
     const response = await fetch(`${url}?zip=${zip}&appid=${key}&units=metric`);
@@ -16,6 +24,10 @@ const getData = async (url='', zip, key) => {
         console.log(err)
     }
 }
+
+//*************************************************
+// Sending data comming from the API to the server.
+//*************************************************
 
 const sendData = async (url='', data={}) => {
     const response = await fetch(url, {
@@ -28,6 +40,10 @@ const sendData = async (url='', data={}) => {
     });
 }
 
+//**************************************************
+// Creating function that pull data from the server.
+//**************************************************
+
 const retrieveData = async (url='') => {
     const response = await fetch(url);
     
@@ -38,6 +54,10 @@ const retrieveData = async (url='') => {
         console.log(err)
     }
 }
+
+//***********************************************
+// Creating function that update the UI.
+//***********************************************
 
 const updateUI = (data) => {
     let image;
@@ -56,6 +76,10 @@ const updateUI = (data) => {
     }
 }
 
+// **********************************************************************
+// Creating function that chain the promises coming from other functions.
+//***********************************************************************
+
 const callTheFetchDataFun = () => {
     const zip = document.getElementById('zip').value;
     const content = document.getElementById('feelings').value;
@@ -73,6 +97,12 @@ const callTheFetchDataFun = () => {
         });
     }
 }
+
+//*****************************************
+// Adding the event listener to the button.
+//*****************************************
+
+const btn = document.getElementById('generate');
 
 btn.addEventListener('click', callTheFetchDataFun);
 

@@ -1,7 +1,7 @@
-// Setup empty JS object to act as endpoint for all routes
+// Adding the projectData object that will hold all the data.
 projectData = {};
 
-// Require Express to run server and routes
+// require all the dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -29,6 +29,8 @@ app.listen(port, () => {
     console.log(`App is listening to port: ${port}`)
 })
 
+// SettingUp post route to handle the data coming from the client side.
+
 app.post('/sendweather', (req, res) => {
     projectData.temp = req.body.data.main.temp;
     projectData.date = req.body.date;
@@ -36,6 +38,8 @@ app.post('/sendweather', (req, res) => {
 
     res.send(projectData)
 })
+
+// settingUP a route to handle sending data to the client side.
 
 app.get('/all', (req, res) => {
     res.send(projectData)
